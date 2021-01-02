@@ -1,15 +1,22 @@
 <h1>Login</h1>
+<!-- <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'> -->
+
+
 <div class="container">
-    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}
-
+    <div class="alert alert-danger" role="alert" *ngIf='invalidLogin'>{{errorMessage}}
+    <a href="http://localhost:4200/" class="alert-link">Try again</a>
     </div>
+    <!-- <div class="alert alert-danger" role="alert">
+        {{errorOccured}} <a href="http://localhost:4200/" class="alert-link">Try again</a>
+    </div> -->
 
-    <div>User Name: <input 
+    <div>User Name: <input mdbInput
         type="text"
         class="text"
         name="username"
         [(ngModel)]="username"
         >
+
         Password: <input
         type="password"
         name="password"
@@ -18,9 +25,16 @@
         
         <!-- <button class="btn btn-success" (click)=onClick()>Login</button> -->
         <!-- <button class="btn btn-success" (click)=handleBasicAuthLogin()>Login</button> -->
-        <button class="btn btn-success" (click)=handleJWTAuthLogin()>Login</button>
-
+    <button 
+        class="btn btn-success"
+        (click)=handleJWTAuthLogin()
+    >Login</button>
 
     </div>
+
+    <a style="color: #ac2bac" href="#!" role="button"
+  ><i class="fab fa-instagram fa-lg"></i
+></a>
+
 </div>
 

@@ -2,6 +2,11 @@ import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
+
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,12 +36,15 @@ import { TodoComponent } from './todo/todo.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService,
-    multi: true}
+    multi: true},
+    
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

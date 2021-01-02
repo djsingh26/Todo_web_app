@@ -1,5 +1,7 @@
 <H1>TODO</H1>
 
+
+
 <div class="container">
 
     <div class="alert alert-warning" *ngIf="todoForm.invalid && todoForm.dirty"> Invalid value </div>
@@ -20,7 +22,18 @@
         >
     </fieldset>
 
-    <fieldset class=" form-group" >
+    <fieldset>
+        <label [(ngModel)]="this.todo.done" >is Completed? = {{this.todo.done}}</label>
+        <br>
+
+        <div class="btn-toolbar">
+            <button class="btn btn-success mr-3" (click)="trueFunc()">True</button>
+            <button class="btn btn-danger mr-3" (click)="falseFunc()">False</button>
+        </div>
+
+    </fieldset>
+
+    <fieldset class="form-group" >
         <label>Target Date</label>
 
         <input type="date" #targetDate="ngModel"

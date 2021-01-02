@@ -70,6 +70,8 @@ export class ListTodoComponent implements OnInit {
     this.router.navigate(['todos',-1])
   }
 
+ 
+
 }
 
 export class Todo{

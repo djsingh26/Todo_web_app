@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
 
+  welcomemsg = "Login Successful!!"
   message = "Welcome"
   name=''
   welcomeMessageFromService:string;

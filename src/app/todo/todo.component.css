@@ -1,3 +1,10 @@
 .ng-invalid:not(form) {
     border: 2px solid red
 }
+
+.topright{
+  position: absolute;
+  top: 16px;
+  right: 100px;
+  font-size: 18px;
+}

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
+  todaysDate = new Date();
+  time = new Date();
+
   // isUserLoggedIn: boolean = false;
   constructor(
     public hardcodedAuthenticationService: HardcodedAuthenticationService
@@ -14,6 +18,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     // this.isUserLoggedIn = this.hardcodedAuthenticationService.isUserLoggedIn();
+    setInterval(() => {
+      this.time = new Date();
+   }, 1000);
   }
 
 }

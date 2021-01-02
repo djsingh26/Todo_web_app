@@ -24,9 +24,19 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/fontawesome.css",
+              "node_modules/@fortawesome/fontawesome-free/css/solid.css",
+              "node_modules/@fortawesome/fontawesome-free/css/regular.css",
+              "node_modules/@fortawesome/fontawesome-free/css/brands.css",
+              "node_modules/angular-bootstrap-md/assets/css/bootstrap/bootstrap.css",
+              "node_modules/angular-bootstrap-md/assets/css/mdb.css",
+              "node_modules/animate.css/animate.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
             "production": {

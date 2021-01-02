@@ -10,6 +10,10 @@ import { Todo } from '../list-todo/list-todo.component';
 })
 export class TodoComponent implements OnInit {
 
+  todaysDate = new Date();
+  time = new Date();
+
+
   id:number
   todo:Todo
 
@@ -31,6 +35,10 @@ export class TodoComponent implements OnInit {
       )
     }
 
+    setInterval(() => {
+      this.time = new Date();
+   }, 1000);
+
   }
 
   saveTodo() {
@@ -51,6 +59,13 @@ export class TodoComponent implements OnInit {
         }
       )
     }
+  }
+
+  trueFunc(){
+    this.todo.done = true
+  }
+  falseFunc(){
+    this.todo.done = false;
   }
 
 }

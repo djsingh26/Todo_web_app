@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   username= 'djrocks'
   password='pass'
 
-  errorMessage = 'INVALID'
+  errorMessage = 'Login Failed !! Please '
   invalidLogin = false
 
   constructor(private router:Router,

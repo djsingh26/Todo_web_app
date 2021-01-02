@@ -1,6 +1,14 @@
 <header>
     <nav class="navbar navbar-expand-md navar-dark bg-dark">
-       <div><a href="">blank</a></div>
+       <div><a href="http://localhost:4200/">Blank</a></div>
+
+       <p id="date"></p>
+            <div class="topright" 
+                style="font-family:'Courier New'"
+                style="color:greenyellow"
+            >
+            Today: {{todaysDate | date:'yyyy-MM-dd':'utc'}} {{ time | date: 'hh:mm:ss a' }}
+        </div>
 
         <ul class="navbar-nav">
             <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/dj" class="nav-link">Home</a></li>
